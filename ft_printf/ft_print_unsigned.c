@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 12:56:42 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/12 13:03:50 by lgabet           ###   ########.fr       */
+/*   Created: 2022/12/09 16:04:31 by lgabet            #+#    #+#             */
+/*   Updated: 2023/04/12 13:15:02 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mlx_linux/mlx.h"
+#include "ft_printf.h"
 
-int main()
+int	ft_lenght_size_u(unsigned int nbr)
 {
-    void *mlx = mlx_init();
-    void *win = mlx_new_window(mlx, 640, 360, "Tutorial Window - Create Image");
+	int	lenght;
 
-    void *image = mlx_new_image(mlx, 640, 360);
-    
-    // The following code goes here.
+	lenght = 1;
+	while (nbr >= 10)
+	{
+		nbr /= 10;
+		lenght++;
+	}
+	return (lenght);
+}
 
-    mlx_loop(mlx);
+int	ft_print_unsigned(unsigned int nbr)
+{
+	int		lenght;
+	char	*str;
+
+	str = ft_itoa_u(nbr);
+	if (!str)
+		return (-1);
+	if (ft_putstr(str) == -1)
+		return (free(str), -1);
+	lenght = ft_lenght_size_u(nbr);
+	free(str);
+	return (lenght);
 }
