@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:56:42 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/26 17:40:47 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/26 19:26:58 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,15 @@ int	main(int ac, char **av)
 	char **map;
 
 	map = ft_parsing(ac, av);
-	int	i;
+	if (!map)
+		return (0);
+	if (ft_error_sl(map))
+	{
+		ft_printf("Error\nInvalid map\n");
+		ft_free_tab_char(map);
+		return (0);
+	}
+	// int	i;
 
 	// i = 0;
 	// while (map[i])
