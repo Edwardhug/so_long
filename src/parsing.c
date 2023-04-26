@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:34:43 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/26 16:50:03 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/26 17:22:08 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 char	**ft_parsing(int ac, char **av)
 {
+	if (ft_have_error_with_param(ac, av) == 1)
+		return (NULL);
+	
 }
 
 int	ft_have_error_with_param(int ac, char **av)
@@ -46,4 +49,25 @@ int	ft_have_error_with_param(int ac, char **av)
 		i++;
 	}
 	return (0);
+}
+
+int	ft_count_line(char **av)
+{
+	int		fd;
+	char	*line;
+	int 	i;
+
+	fd = open(av[1], O_RDONLY);
+	i = 0;
+	while (1)
+	{
+		line = get_next_line(fd);
+		if (!line)
+			break ;
+		free(line);
+		i++;
+	}
+	free(line);
+	close (fd);
+	return (i);
 }

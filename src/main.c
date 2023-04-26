@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:56:42 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/26 16:06:58 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/26 17:24:56 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@
 
 int	main(int ac, char **av)
 {
-	// char **map;
+	char **map;
 
-	// map = ft_parsing(ac, av);
-	ft_have_error_with_param(ac, av);
+	map = ft_parsing(ac, av);
 }
