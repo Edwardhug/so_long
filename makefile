@@ -15,6 +15,7 @@ ft_printf/ft_itoa_x.c\
 gnl/get_next_line.c\
 gnl/get_next_line_utils.c\
 src/utils/ft_strcpy.c\
+src/utils/ft_free.c\
 src/parsing.c\
 src/main.c
 

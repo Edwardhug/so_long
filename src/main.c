@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:56:42 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/26 17:24:56 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/26 17:40:47 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,12 @@ int	main(int ac, char **av)
 	char **map;
 
 	map = ft_parsing(ac, av);
+	int	i;
+
+	// i = 0;
+	// while (map[i])
+	// {
+	// 	ft_printf("%s", map[i]);
+	// 	i++;
+	// }
 }

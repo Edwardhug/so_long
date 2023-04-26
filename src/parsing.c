@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:34:43 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/26 17:22:08 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/26 17:37:38 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,32 @@
 
 char	**ft_parsing(int ac, char **av)
 {
+	int		number_of_line;
+	int		fd;
+	char	**map;
+	int		i;
+
 	if (ft_have_error_with_param(ac, av) == 1)
 		return (NULL);
-	
+	number_of_line = ft_count_line(av);
+	i = 0;
+	map = malloc(sizeof(char *) * (number_of_line + 1));
+	if (!map)
+		return (NULL);
+	fd = open(av[1], O_RDONLY);
+	while (i < number_of_line)
+	{
+		map[i] = get_next_line(fd);
+		if (!map[i])
+		{
+			ft_free_tab_char(map);
+			return (NULL);
+		}
+		i++;
+	}
+	close (fd);
+	map[i] = 0;
+	return (map);
 }
 
 int	ft_have_error_with_param(int ac, char **av)
