@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 13:25:02 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/26 16:39:08 by lgabet           ###   ########.fr       */
+/*   Created: 2023/01/06 10:29:12 by lgabet            #+#    #+#             */
+/*   Updated: 2023/01/17 13:17:22 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-// #include "../mlx_linux/mlx.h"
-#include "../ft_printf/ft_printf.h"
-#include "../gnl/get_next_line.h"
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -23,8 +20,12 @@
 #  define BUFFER_SIZE 10
 # endif
 
-char	**ft_parsing(int ac, char **av);
-int		ft_have_error_with_param(int ac, char **av);
-char	*ft_strcpy_sl(char *to_ret, char *to_cpy);
+char	*get_next_line(int fd);
+char	*ft_fill_line(int fd, char *buff);
+char	*ft_strjoin(char *s1, char *s2);
+int		ft_strlen_buff(char *str);
+int		have_newline(char *str);
+void	ft_clear_buff(char *str);
+int		ft_strlen(char *str);
 
 #endif
