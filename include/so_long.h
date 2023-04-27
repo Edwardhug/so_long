@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:25:02 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/27 13:41:08 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/27 14:30:31 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,8 @@ int	    ft_player(char **map);
 char	*ft_strdup(char *s2);
 int	    ft_check_map(char **map);
 char	**ft_charstr_cpy(char **map);
+int	    ft_check_around(char **map, int i, int j);
+int 	ft_is_extendable(char **map);
+char	*ft_strcpy_sl(char *to_ret, char *to_cpy);
 
 #endif

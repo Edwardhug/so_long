@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:32:06 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/27 13:40:38 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/27 14:28:14 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int	ft_error_sl(char **map)
 		return (1);
 	if (ft_item(map) < 1)
 		return (1);
-	if (ft_check_map(map) == 1)
+	if (ft_is_extendable(map) == 1)
+		ft_printf("yes it is\n");
 	return (0);
 }
 
