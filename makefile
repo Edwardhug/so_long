@@ -17,9 +17,11 @@ gnl/get_next_line_utils.c\
 src/utils/ft_strcpy.c\
 src/utils/ft_free.c\
 src/utils/ft_strlen_nl.c\
+src/utils/ft_strdup.c\
 src/parsing.c\
 src/ft_error.c\
 src/ft_error_2.c\
+src/ft_check_map.c\
 src/main.c
 
 INCLUDES = ft_printf/ft_printf.h\

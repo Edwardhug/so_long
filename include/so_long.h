@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:25:02 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/27 13:07:21 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/27 13:41:08 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ int	    ft_character(char **map);
 int	    ft_exit(char **map);
 int	    ft_item(char **map);
 int	    ft_player(char **map);
+char	*ft_strdup(char *s2);
+int	    ft_check_map(char **map);
+char	**ft_charstr_cpy(char **map);
 
 #endif
