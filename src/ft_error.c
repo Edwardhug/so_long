@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:32:06 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/27 12:16:18 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/27 13:09:33 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,15 @@ int	ft_error_sl(char **map)
 		return (1);
 	if ((ft_check_horizontal(map) || ft_check_vertical(map)) == 1)
 		return (1);
-	if ((ft_character(map) || ft_exit(map) || ft_player(map)) != 1)
+	if ((ft_character(map)) != 1)
 		return (1);
+	if ((ft_exit(map)) != 1)
+		return (1);
+	if ((ft_player(map)) != 1)
+		return (1);
+	if ((ft_item(map)) < 1)
+		return (1);
+	return (0);
 }
 
 int	ft_check_horizontal(char **map)

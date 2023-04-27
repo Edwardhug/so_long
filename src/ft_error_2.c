@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 11:47:44 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/27 12:10:04 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/27 13:06:52 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,8 @@ int	ft_character(char **map)
 		j = 0;
 		while (map[i][j] && map[i][j] != '\n')
 		{
-			if (map[i][j] != 'P' || map[i][j] != 'C')
-				count++;
-			else if (map[i][j] != 'E' || map[i][j] != '1')
-				count++;
-			if (map[i][j] != '0')
+			if (map[i][j] != 'P' && map[i][j] != 'C' && map[i][j] != 'E'
+				&& map[i][j] != '1' && map[i][j] != '0')
 				count++;
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:25:02 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/27 12:08:53 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/04/27 13:07:21 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,6 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
-# endif
-
-# ifndef PLAYER
-#  define PLAYER 1
-# endif
-
-# ifndef ITEM
-#  define ITEM 1
-# endif
-
-# ifndef EXIT
-#  define EXIT 1
 # endif
 
 char	**ft_parsing(int ac, char **av);
