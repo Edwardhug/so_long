@@ -22,6 +22,7 @@ src/parsing.c\
 src/ft_error.c\
 src/ft_error_2.c\
 src/ft_check_map.c\
+src/ft_check_map2.c\
 src/main.c
 
 INCLUDES = ft_printf/ft_printf.h\
