@@ -6,11 +6,11 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:35:28 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/26 17:35:52 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/03 16:30:34 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/so_long.h"
+#include "../include/so_long.h"
 
 void	ft_free_tab_char(char **str)
 {

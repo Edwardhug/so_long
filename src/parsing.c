@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:34:43 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/26 17:37:38 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/03 16:41:55 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_have_error_with_param(int ac, char **av)
 	int		i;
 
 	size = ft_strlen(av[1]);
-	ft_strcpy_sl(format, ".ber");
+	ft_strlcpy(format, ".ber", 5);
 	i = 0;
 	if (ac != 2)
 	{

@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strlen_nl.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/06 10:29:12 by lgabet            #+#    #+#             */
-/*   Updated: 2023/01/17 13:17:22 by lgabet           ###   ########.fr       */
+/*   Created: 2023/05/03 16:16:32 by lgabet            #+#    #+#             */
+/*   Updated: 2023/05/03 16:37:43 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "../include/so_long.h"
 
-# include <stdlib.h>
-# include <unistd.h>
+int	ft_strlen_nl(char *str)
+{
+	int	i;
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
-# endif
+	i = 0;
+	while (str[i] && str[i] != '\n')
+		i++;
+	return (i);
+}
 
-char	*get_next_line(int fd);
-char	*ft_fill_line(int fd, char *buff);
-char	*ft_strjoin(char *s1, char *s2);
-int		ft_strlen_buff(char *str);
-int		have_newline(char *str);
-void	ft_clear_buff(char *str);
-int		ft_strlen(char *str);
-
-#endif
+int ft_strlen_tab(char **str)
+{
+	int i;
+	
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}

@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:32:06 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/27 23:50:01 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/03 16:32:07 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int	ft_check_horizontal(char **map)
 			return (1);
 		j++;
 	}
+	return (0);
 }
 
 int	ft_check_number_of_line(char **map)
