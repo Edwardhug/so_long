@@ -1,7 +1,7 @@
 NAME	= so_long
 CC		= gcc
-CFLAGS	= #-lX11 -lXext
-# MLX		= mlx_linux/libmlx.a
+CFLAGS	= -lX11 -lXext
+MLX		= mlx_linux/libmlx.a
 SRCS	= ft_printf/ft_printchar.c\
 ft_printf/ft_printstr.c\
 ft_printf/ft_printf.c\
@@ -23,6 +23,7 @@ src/ft_error.c\
 src/ft_error_2.c\
 src/ft_check_map.c\
 src/ft_check_map2.c\
+src/map.creator.c\
 src/main.c
 
 INCLUDES = ft_printf/ft_printf.h\
@@ -36,9 +37,8 @@ all: $(NAME)
 
 
 $(NAME) : $(OBJS) $(INCLUDES)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) $(MLX) -o $(NAME)
 
-# add mlx before -o
 FORCE:
 
 clean:
