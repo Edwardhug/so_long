@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:25:02 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/03 16:34:08 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/03 18:21:08 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ typedef	struct map_struct_s
 	void *win;
 	void *image;
 	void *sea;
+	void *shore;
+	void *turtle;
+	void *coin;
+	void *door;
 }			map_struct;
 
 char	**ft_parsing(int ac, char **av);
@@ -60,6 +64,10 @@ int		ft_check_finish(char **map);
 int		ft_map_creator(char **map, map_struct lib);
 int		ft_strlen_tab(char **str);
 int		ft_print_map(char **map, map_struct lib);
-int 	ft_fill_sea(char **map, map_struct lib);
+int 	ft_fill_sea(char **map, map_struct *lib);
+int 	ft_put_shore(char **map, map_struct *lib);
+int 	ft_put_turtle(char **map, map_struct *lib);
+int 	ft_put_coin(char **map, map_struct *lib);
+int 	ft_put_door(char **map, map_struct *lib);
 
 #endif
