@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:56:42 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/03 11:33:10 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/03 16:49:45 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int main(int ac, char **av)
 	map_struct s_lib;
 	char **map;
 
+	if (ac < 2)
+		return (1);
 	map = ft_parsing(ac, av);
 	if (!map)
 		return (0);

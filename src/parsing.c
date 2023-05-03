@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:34:43 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/03 16:41:55 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/03 16:50:26 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	**ft_parsing(int ac, char **av)
 
 int	ft_have_error_with_param(int ac, char **av)
 {
-	int 	size;
+	size_t 	size;
 	char	format[5];
 	int		i;
 
