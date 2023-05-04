@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:45:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/04 14:06:33 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/04 14:17:55 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	ft_have_input(int keysym, map_struct *lib)
 		ft_move_down(lib->map, *lib);
 	if (keysym == 119)
 		ft_move_up(lib->map, *lib);
+	ft_printf("%d\n", lib->count);
+	lib->count++;
 	if(ft_exit(lib->map) == 0 && ft_item(lib->map) == 0)
 		mlx_destroy_window(lib->mlx, lib->win);
 	return (0);
@@ -40,6 +42,7 @@ int	ft_map_creator(char **map, map_struct lib)
 	
 	x = 89 * ft_strlen_nl(map[0]);
 	y = 89 * ft_strlen_tab(map);
+	lib.count = 1;
 	lib.map = map;
 	lib.height = 10;
 	lib.width = 100;
