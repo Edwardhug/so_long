@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:45:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/04 12:50:12 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/04 13:00:35 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int	ft_have_input(int keysym, map_struct *lib)
 		ft_move_down(lib->map, *lib);
 	if (keysym == 119)
 		ft_move_up(lib->map, *lib);
-	if(ft_exit(map) == 0)
+	if(ft_exit(lib->map) == 0 && ft_item(lib->map) == 0)
+		mlx_destroy_window(lib->mlx, lib->win);
 	return (0);
 }
 
