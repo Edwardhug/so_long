@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:14:22 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/03 18:21:59 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/04 14:01:46 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,32 @@ int ft_put_door(char **map, map_struct *lib)
 		{
 			if (map[i][j] == 'E')
 				mlx_put_image_to_window(lib->mlx, lib->win, lib->door, j * 89, i * 89);
+			j++;
+		}
+		i++;
+	}
+	return (1);
+}
+
+int ft_put_lock(char **map, map_struct *lib)
+{
+	int	i;
+	int	j;
+	
+	i = 0;
+	lib->lock = mlx_xpm_file_to_image(lib->mlx, "sprite/lock.xpm", &lib->width, &lib->height);
+	if (lib->lock == NULL)
+	{
+		ft_printf("wd");
+		exit(EXIT_FAILURE);
+	}
+	while (map[i])
+	{
+		j = 0;
+		while (map[i][j] && map[i][j] != '\n')
+		{
+			if (map[i][j] == 'L')
+				mlx_put_image_to_window(lib->mlx, lib->win, lib->lock, j * 89, i * 89);
 			j++;
 		}
 		i++;

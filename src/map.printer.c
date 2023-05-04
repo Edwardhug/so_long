@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:45:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/04 13:00:35 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/04 14:06:33 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,11 @@ int	ft_map_creator(char **map, map_struct lib)
 		return (0);
 	// while (ft_exit(map) == 1)
 	// {
-		mlx_loop_hook(lib.mlx, &handle_no_event, &lib);	
-		mlx_key_hook(lib.win, ft_have_input, &lib);
+	mlx_loop_hook(lib.mlx, &handle_no_event, &lib);	
+	mlx_key_hook(lib.win, ft_have_input, &lib);
 	// }
 	// mlx_key_hook(lib.win, key_hook, &lib);
 	mlx_loop(lib.mlx);
-	ft_printf("mapprinter\n");
 	return (1);
 }
 
@@ -70,6 +69,8 @@ int	ft_print_map(char **map, map_struct lib)
 	if (!ft_put_coin(map, &lib))
 		return (0);
 	if (!ft_put_door(map, &lib))
+		return (0);
+	if (!ft_put_lock(map, &lib))
 		return (0);
 	return (1);
 }
@@ -91,7 +92,8 @@ int ft_fill_sea(char **map, map_struct *lib)
 		j = 0;
 		while (map[i][j] && map[i][j] != '\n')
 		{
-			mlx_put_image_to_window(lib->mlx, lib->win, lib->sea, j * 89, i * 89);
+			if (map[i][j] == '0')
+				mlx_put_image_to_window(lib->mlx, lib->win, lib->sea, j * 89, i * 89);
 			j++;
 		}
 		i++;
