@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:25:02 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/03 18:21:08 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/04 12:45:57 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 
 typedef	struct map_struct_s
 {
+	char **map;
 	int height;
 	int width;
 	void *mlx;
@@ -69,5 +70,9 @@ int 	ft_put_shore(char **map, map_struct *lib);
 int 	ft_put_turtle(char **map, map_struct *lib);
 int 	ft_put_coin(char **map, map_struct *lib);
 int 	ft_put_door(char **map, map_struct *lib);
+int		ft_move_right(char **map, map_struct lib);
+int		ft_move_left(char **map, map_struct lib);
+int		ft_move_down(char **map, map_struct lib);
+int		ft_move_up(char **map, map_struct lib);
 
 #endif

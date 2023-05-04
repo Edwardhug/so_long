@@ -6,11 +6,31 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:45:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/03 18:21:39 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/04 12:50:12 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
+
+int	ft_have_input(int keysym, map_struct *lib)
+{
+	if (keysym == 100)
+		ft_move_right(lib->map, *lib);
+	if (keysym == 97)
+		ft_move_left(lib->map, *lib);
+	if (keysym == 115)
+		ft_move_down(lib->map, *lib);
+	if (keysym == 119)
+		ft_move_up(lib->map, *lib);
+	if(ft_exit(map) == 0)
+	return (0);
+}
+
+int	handle_no_event(void *data)
+{
+	/* This function needs to exist, but it is useless for the moment */
+	return (0);
+}
 
 int	ft_map_creator(char **map, map_struct lib)
 {
@@ -19,25 +39,22 @@ int	ft_map_creator(char **map, map_struct lib)
 	
 	x = 89 * ft_strlen_nl(map[0]);
 	y = 89 * ft_strlen_tab(map);
+	lib.map = map;
 	lib.height = 10;
 	lib.width = 100;
 	lib.mlx = mlx_init();
 	lib.win = mlx_new_window(lib.mlx, x, y, "Window");
 	lib.image = mlx_new_image(lib.mlx, x, y);
-	
 	if (!ft_print_map(map, lib))
 		return (0);
-	mlx_loop(lib.mlx);
-	// ft_fill_sea
-	// lib.sea = mlx_xpm_file_to_image(lib.mlx, "sprite/sea.xpm", &lib.width, &lib.height);
-	// if (lib.sea == NULL)
+	// while (ft_exit(map) == 1)
 	// {
-	// 	ft_printf("wd");
-	// 	exit(EXIT_FAILURE);
+		mlx_loop_hook(lib.mlx, &handle_no_event, &lib);	
+		mlx_key_hook(lib.win, ft_have_input, &lib);
 	// }
-	// mlx_put_image_to_window(lib.mlx, lib.win, lib.sea, 0, 0);
-
-	// mlx_loop(lib.mlx);
+	// mlx_key_hook(lib.win, key_hook, &lib);
+	mlx_loop(lib.mlx);
+	ft_printf("mapprinter\n");
 	return (1);
 }
 

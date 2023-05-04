@@ -6,7 +6,8 @@ SRCS	= 	ft_free.c\
 			ft_check_map.c\
 			ft_check_map2.c\
 			map.printer.c\
-			map_printf_2.c \
+			map_printf_2.c\
+			ft_move.c\
 			main.c
 
 SRCS_D			=	src/
@@ -42,7 +43,7 @@ CC				=	cc
 
 GCC				=	gcc
 
-CCFLAG			=	-Wall -Werror -Wextra
+CCFLAG			=	# -Wall -Werror -Wextra
 
 FSA				=	-fsanitize=address -g3
 
