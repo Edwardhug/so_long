@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:56:42 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/07 14:26:15 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/10 15:08:42 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int main(int ac, char **av)
 	if (!ft_map_creator(map,s_lib))
 	{
 		ft_printf("Error\nLib problem\n");
-		ft_free_tab_char(map);
-		return (0);
 	}
+	ft_free_tab_char(map);
+	return (0);
 }
 
 // int	main(int ac, char **av)

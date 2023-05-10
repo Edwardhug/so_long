@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:45:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/10 14:45:08 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/10 15:23:59 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_have_input(int keysym, map_struct *lib)
 	}
 	if(ft_exit(lib->map) == 0 && ft_item(lib->map) == 0)
 	{
-		free_images(lib)	
+		// free_images(lib);
 		mlx_destroy_window(lib->mlx, lib->win);
 	}
 	return (0);
@@ -56,14 +56,11 @@ int	ft_map_creator(char **map, map_struct lib)
 	lib.mlx = mlx_init();
 	lib.win = mlx_new_window(lib.mlx, x, y, "Window");
 	lib.image = mlx_new_image(lib.mlx, x, y);
+	ft_init_images(&lib);
 	if (!ft_print_map(map, lib))
 		return (0);
-	// while (ft_exit(map) == 1)
-	// {
-	mlx_loop_hook(lib.mlx, &handle_no_event, &lib);	
+	mlx_loop_hook(lib.mlx, &handle_no_event, &lib);
 	mlx_key_hook(lib.win, ft_have_input, &lib);
-	// }
-	// mlx_key_hook(lib.win, key_hook, &lib);
 	mlx_loop(lib.mlx);
 	return (1);
 }

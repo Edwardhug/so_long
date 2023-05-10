@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:36:37 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/10 14:37:05 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/10 14:57:38 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int ft_fill_sea(char **map, map_struct *lib)
 	int	j;
 	
 	i = 0;
-	lib->sea = mlx_xpm_file_to_image(lib->mlx, "sprite/sea.xpm", &lib->width, &lib->height);
+	// lib->sea = mlx_xpm_file_to_image(lib->mlx, "sprite/sea.xpm", &lib->width, &lib->height);
 	if (lib->sea == NULL)
 	{
 		ft_printf("wd");
@@ -44,7 +44,7 @@ int ft_put_shore(char **map, map_struct *lib)
 	int	j;
 	
 	i = 0;
-	lib->shore = mlx_xpm_file_to_image(lib->mlx, "sprite/shore.xpm", &lib->width, &lib->height);
+	// lib->shore = mlx_xpm_file_to_image(lib->mlx, "sprite/shore.xpm", &lib->width, &lib->height);
 	if (lib->shore == NULL)
 	{
 		ft_printf("wd");
@@ -70,7 +70,7 @@ int ft_put_turtle(char **map, map_struct *lib)
 	int	j;
 	
 	i = 0;
-	lib->turtle = mlx_xpm_file_to_image(lib->mlx, "sprite/turtle.xpm", &lib->width, &lib->height);
+	// lib->turtle = mlx_xpm_file_to_image(lib->mlx, "sprite/turtle.xpm", &lib->width, &lib->height);
 	if (lib->turtle == NULL)
 	{
 		ft_printf("wd");

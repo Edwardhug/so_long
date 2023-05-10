@@ -6,9 +6,10 @@ SRCS	= 	ft_free.c\
 			ft_check_map.c\
 			ft_check_map2.c\
 			map.printer.c\
-			map_printf_2.c\
-			ft_move.c\
+			ft_put_images_2.c\
 			ft_put_images.c\
+			ft_move.c\
+			ft_init_images.c\
 			main.c
 
 SRCS_D			=	src/

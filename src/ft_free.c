@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:35:28 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/03 16:30:34 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/10 15:24:14 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,9 @@ void	ft_free_tab_char(char **str)
 		i++;
 	}
 	free(str);
+}
+
+void	free_images(map_struct *lib)
+{
+	free(lib->turtle);
 }

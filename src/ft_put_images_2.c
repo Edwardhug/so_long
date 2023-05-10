@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_printf_2.c                                     :+:      :+:    :+:   */
+/*   ft_put_images_2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 18:14:22 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/04 14:01:46 by lgabet           ###   ########.fr       */
+/*   Created: 2023/05/10 14:53:05 by lgabet            #+#    #+#             */
+/*   Updated: 2023/05/10 14:58:23 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int ft_put_coin(char **map, map_struct *lib)
 	int	j;
 	
 	i = 0;
-	lib->coin = mlx_xpm_file_to_image(lib->mlx, "sprite/coin.xpm", &lib->width, &lib->height);
+	// lib->coin = mlx_xpm_file_to_image(lib->mlx, "sprite/coin.xpm", &lib->width, &lib->height);
 	if (lib->coin == NULL)
 	{
 		ft_printf("wd");
@@ -44,7 +44,7 @@ int ft_put_door(char **map, map_struct *lib)
 	int	j;
 	
 	i = 0;
-	lib->door = mlx_xpm_file_to_image(lib->mlx, "sprite/door.xpm", &lib->width, &lib->height);
+	// lib->door = mlx_xpm_file_to_image(lib->mlx, "sprite/door.xpm", &lib->width, &lib->height);
 	if (lib->door == NULL)
 	{
 		ft_printf("wd");
@@ -70,7 +70,7 @@ int ft_put_lock(char **map, map_struct *lib)
 	int	j;
 	
 	i = 0;
-	lib->lock = mlx_xpm_file_to_image(lib->mlx, "sprite/lock.xpm", &lib->width, &lib->height);
+	// lib->lock = mlx_xpm_file_to_image(lib->mlx, "sprite/lock.xpm", &lib->width, &lib->height);
 	if (lib->lock == NULL)
 	{
 		ft_printf("wd");
