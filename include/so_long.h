@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:25:02 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/04 14:16:08 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/07 14:32:20 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include "../mlx_linux/mlx.h"
 #include "../Libft/all_libft.h"
+#include <X11/Xlib.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
