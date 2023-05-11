@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:45:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/11 14:14:21 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/11 17:49:54 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_have_input(int keysym, map_struct *lib)
 {
+	if (keysym == 65307)
+		ft_free_all(lib);
 	if (keysym == 65363)
 		ft_move_right(lib->map, *lib);
 	if (keysym == 65361)
@@ -29,13 +31,11 @@ int	ft_have_input(int keysym, map_struct *lib)
 		return (0);
 	if(ft_exit(lib->map) == 0 && ft_item(lib->map) == 0)
 		ft_free_all(lib);
-		mlx_destroy_window(lib->mlx, lib->win);
 	return (0);
 }
 
 int	handle_no_event(void *data)
 {
-	/* This function needs to exist, but it is useless for the moment */
 	return (0);
 }
 
@@ -58,6 +58,8 @@ int	ft_map_creator(char **map, map_struct lib)
 		return (0);
 	mlx_loop_hook(lib.mlx, &handle_no_event, &lib);
 	mlx_key_hook(lib.win, ft_have_input, &lib);
+	mlx_hook(lib.win, 17, 1L<<0, &ft_free_all, &lib);  //fenetre
+	// mlx_hook(lib.mlx, 33, 1L<<17, &ft_free_all, &lib);  //input utilisateur
 	mlx_loop(lib.mlx);
 	return (1);
 }

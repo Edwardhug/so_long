@@ -47,7 +47,7 @@ GCC				=	gcc
 
 CCFLAG			=	# -Wall -Werror -Wextra
 
-FSA				=	-fsanitize=address -g3
+FSA				=	-g3
 
 RM				=	rm -f -r
 
