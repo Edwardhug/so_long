@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:25:02 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/10 15:24:30 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/11 14:18:40 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,6 @@ int		ft_move_up(char **map, map_struct lib);
 int 	ft_put_lock(char **map, map_struct *lib);
 void	ft_init_images(map_struct *lib);
 void	free_images(map_struct *lib);
+void	ft_free_all(map_struct *lib);
 
 #endif
