@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:45:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/11 17:49:54 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 16:36:42 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ int	ft_have_input(int keysym, map_struct *lib)
 	if (keysym == 65307)
 		ft_free_all(lib);
 	if (keysym == 65363)
-		ft_move_right(lib->map, *lib);
+		ft_move_right(lib->map, lib);
 	if (keysym == 65361)
-		ft_move_left(lib->map, *lib);
+		ft_move_left(lib->map, lib);
 	if (keysym == 65364)
-		ft_move_down(lib->map, *lib);
+		ft_move_down(lib->map, lib);
 	if (keysym == 65362)
-		ft_move_up(lib->map, *lib);
-	if ((keysym == 65361) || (keysym == 65362) || (keysym == 65363) ||
-		(keysym == 65364))
-			ft_printf("%d\n", lib->count++);
+		ft_move_up(lib->map, lib);
+	// if ((keysym == 65361) || (keysym == 65362) || (keysym == 65363) ||
+	// 	(keysym == 65364))
+	// 		ft_printf("%d\n", lib->count++);
 	if (!ft_print_map(lib->map, *lib))
 		return (0);
 	if(ft_exit(lib->map) == 0 && ft_item(lib->map) == 0)
