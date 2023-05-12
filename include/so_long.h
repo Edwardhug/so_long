@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:25:02 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/12 16:36:19 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 17:22:25 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ typedef	struct map_struct_s
 {
 	int count;
 	char **map;
-	int height;
-	int width;
+	int he;
+	int wi;
 	void *mlx;
 	void *win;
 	void *image;
@@ -81,5 +81,6 @@ int 	ft_put_lock(char **map, map_struct *lib);
 void	ft_init_images(map_struct *lib);
 void	free_images(map_struct *lib);
 int		ft_free_all(map_struct *lib);
+void 	short_image_window(map_struct *lib, int i, int j, void *img);
 
 #endif

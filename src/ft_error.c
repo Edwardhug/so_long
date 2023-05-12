@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 18:32:06 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/10 15:14:38 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 17:11:39 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int	ft_error_sl(char **map)
 
 int	ft_check_horizontal(char **map)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -62,7 +62,7 @@ int	ft_check_horizontal(char **map)
 
 int	ft_check_number_of_line(char **map)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (map[i])
@@ -70,7 +70,7 @@ int	ft_check_number_of_line(char **map)
 	return (i);
 }
 
-int ft_check_vertical(char **map)
+int	ft_check_vertical(char **map)
 {
 	int	i;
 	int	j;

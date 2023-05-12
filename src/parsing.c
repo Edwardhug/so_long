@@ -6,39 +6,47 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:34:43 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/03 16:50:26 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 17:42:57 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-char	**ft_parsing(int ac, char **av)
+char	**ft_while_parsing(int number_of_line, char **map, int fd)
 {
-	int		number_of_line;
-	int		fd;
-	char	**map;
-	int		i;
+	int i;
 
-	if (ft_have_error_with_param(ac, av) == 1)
-		return (NULL);
-	number_of_line = ft_count_line(av);
 	i = 0;
-	map = malloc(sizeof(char *) * (number_of_line + 1));
-	if (!map)
-		return (NULL);
-	fd = open(av[1], O_RDONLY);
 	while (i < number_of_line)
 	{
 		map[i] = get_next_line(fd);
 		if (!map[i])
 		{
 			ft_free_tab_char(map);
-			return (NULL);
+			close(fd);
+			exit(EXIT_FAILURE);
 		}
 		i++;
 	}
-	close (fd);
-	map[i] = 0;
+	close(fd);
+	return (map);
+}
+
+char	**ft_parsing(int ac, char **av)
+{
+	int		number_of_line;
+	int		fd;
+	char	**map;
+
+	if (ft_have_error_with_param(ac, av) == 1)
+		return (NULL);
+	number_of_line = ft_count_line(av);
+	map = malloc(sizeof(char *) * (number_of_line + 1));
+	if (!map)
+		return (NULL);
+	fd = open(av[1], O_RDONLY);
+	map = ft_while_parsing(number_of_line, map, fd);
+	map[number_of_line] = 0;
 	return (map);
 }
 

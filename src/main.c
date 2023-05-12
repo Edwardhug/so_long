@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:56:42 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/10 15:08:42 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 17:19:26 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(int ac, char **av)
 {
-	map_struct s_lib;
+	map_struct lib;
 	char **map;
 
 	if (ac < 2)
@@ -28,33 +28,10 @@ int main(int ac, char **av)
 		ft_free_tab_char(map);
 		return (0);
 	}
-	if (!ft_map_creator(map,s_lib))
+	if (!ft_map_creator(map, lib))
 	{
 		ft_printf("Error\nLib problem\n");
 	}
 	ft_free_tab_char(map);
 	return (0);
 }
-
-// int	main(int ac, char **av)
-// {
-// 	char **map;
-
-// 	map = ft_parsing(ac, av);
-// 	if (!map)
-// 		return (0);
-// 	if (ft_error_sl(map) == 1)
-// 	{
-// 		ft_printf("Error\nInvalid map\n");
-// 		ft_free_tab_char(map);
-// 		return (0);
-// 	}
-// 	// int	i;
-
-// 	// i = 0;
-// 	// while (map[i])
-// 	// {
-// 	// 	ft_printf("%s", map[i]);
-// 	// 	i++;
-// 	// }
-// }

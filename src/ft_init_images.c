@@ -6,18 +6,25 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:55:13 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/10 15:00:40 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 17:23:05 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-void	ft_init_images(map_struct *lib)
+void	ft_init_images(map_struct *l)
 {
-	lib->turtle = mlx_xpm_file_to_image(lib->mlx, "sprite/turtle.xpm", &lib->width, &lib->height);
-	lib->shore = mlx_xpm_file_to_image(lib->mlx, "sprite/shore.xpm", &lib->width, &lib->height);
-	lib->sea = mlx_xpm_file_to_image(lib->mlx, "sprite/sea.xpm", &lib->width, &lib->height);
-	lib->lock = mlx_xpm_file_to_image(lib->mlx, "sprite/lock.xpm", &lib->width, &lib->height);
-	lib->door = mlx_xpm_file_to_image(lib->mlx, "sprite/door.xpm", &lib->width, &lib->height);
-	lib->coin = mlx_xpm_file_to_image(lib->mlx, "sprite/coin.xpm", &lib->width, &lib->height);
+	l->turtle = mlx_xpm_file_to_image(l->mlx, "s/turtle.xpm", &l->wi, &l->he);
+	l->shore = mlx_xpm_file_to_image(l->mlx, "s/shore.xpm", &l->wi, &l->he);
+	l->sea = mlx_xpm_file_to_image(l->mlx, "s/sea.xpm", &l->wi, &l->he);
+	l->lock = mlx_xpm_file_to_image(l->mlx, "s/lock.xpm", &l->wi, &l->he);
+	l->door = mlx_xpm_file_to_image(l->mlx, "s/door.xpm", &l->wi, &l->he);
+	l->coin = mlx_xpm_file_to_image(l->mlx, "s/coin.xpm", &l->wi, &l->he);
+	if (!l->turtle || !l->shore || !l->sea || !l->lock
+		|| !l->door || !l->coin)
+	{
+		ft_printf("Error\nInit image problem");
+		ft_free_all(l);
+		exit(EXIT_FAILURE);
+	}
 }

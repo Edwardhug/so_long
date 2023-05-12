@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:45:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/12 16:36:42 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 16:50:39 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ int	ft_map_creator(char **map, map_struct lib)
 	y = 89 * ft_strlen_tab(map);
 	lib.count = 1;
 	lib.map = map;
-	lib.height = 10;
-	lib.width = 100;
+	lib.he = 10;
+	lib.wi = 100;
 	lib.mlx = mlx_init();
 	lib.win = mlx_new_window(lib.mlx, x, y, "Window");
 	lib.image = mlx_new_image(lib.mlx, x, y);

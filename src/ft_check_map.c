@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 13:12:19 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/27 23:44:30 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 16:45:50 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_check_map(char **map)
 {
-	char **cpy;
+	char	**cpy;
 
 	cpy = ft_charstr_cpy(map);
 	if (!cpy)
@@ -31,7 +31,7 @@ int	ft_check_map(char **map)
 
 char	**ft_charstr_cpy(char **map)
 {
-	char **cpy;
+	char	**cpy;
 	int		i;
 
 	i = 0;

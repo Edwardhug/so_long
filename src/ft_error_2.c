@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 11:47:44 by lgabet            #+#    #+#             */
-/*   Updated: 2023/04/27 13:06:52 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 16:44:09 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_player(char **map)
 {
 	int	p;
-	int i;
+	int	i;
 	int	j;
 
 	i = 0;
@@ -37,7 +37,7 @@ int	ft_player(char **map)
 int	ft_item(char **map)
 {
 	int	c;
-	int i;
+	int	i;
 	int	j;
 
 	i = 0;
@@ -59,7 +59,7 @@ int	ft_item(char **map)
 int	ft_exit(char **map)
 {
 	int	e;
-	int i;
+	int	i;
 	int	j;
 
 	i = 0;
@@ -81,7 +81,7 @@ int	ft_exit(char **map)
 int	ft_character(char **map)
 {
 	int	count;
-	int i;
+	int	i;
 	int	j;
 
 	i = 0;
