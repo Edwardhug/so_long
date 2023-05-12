@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:42:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/12 16:36:01 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/12 18:11:07 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ int	ft_move_right(char **map, map_struct *lib)
 					map[i][j + 1] = 'P';
 				map[i][j] = '0';
 				ft_printf("%d\n", lib->count++);
-				// if (!ft_print_map(map, lib))
-				// 	return (0);		// va avoir des problems de leaks
 				return (1);
 			}
 			if (map[i][j] == 'L' && map[i][j + 1] != '1')
@@ -40,8 +38,6 @@ int	ft_move_right(char **map, map_struct *lib)
 				map[i][j] = 'E';
 				map[i][j + 1] = 'P';
 				ft_printf("%d\n", lib->count++);
-				// if (!ft_print_map(map, lib))
-				// 	return (0);		// va avoir des problems de leaks
 				return (1);
 			}
 			j++;
@@ -70,8 +66,6 @@ int	ft_move_left(char **map, map_struct *lib)
 					map[i][j - 1] = 'P';
 				map[i][j] = '0';
 				ft_printf("%d\n", lib->count++);
-				// if (!ft_print_map(map, lib))
-				// 	return (0);				// va avoir des problems de leaks
 				return (1);
 			}
 			if (map[i][j] == 'L' && map[i][j - 1] != '1')
@@ -79,8 +73,6 @@ int	ft_move_left(char **map, map_struct *lib)
 				map[i][j] = 'E';
 				map[i][j - 1] = 'P';
 				ft_printf("%d\n", lib->count++);
-				// if (!ft_print_map(map, lib))
-				// 	return (0);				// va avoir des problems de leaks
 				return (1);
 			}
 			j++;
@@ -109,8 +101,6 @@ int	ft_move_down(char **map, map_struct *lib)
 					map[i + 1][j] = 'P';
 				map[i][j] = '0';
 				ft_printf("%d\n", lib->count++);
-				// if (!ft_print_map(map, lib))
-				// 	return (0);				// va avoir des problems de leaks
 				return (1);
 			}
 			if (map[i][j] == 'L' && map[i + 1][j] != '1')
@@ -118,8 +108,6 @@ int	ft_move_down(char **map, map_struct *lib)
 				map[i][j] = 'E';
 				map[i + 1][j] = 'P';
 				ft_printf("%d\n", lib->count++);
-				// if (!ft_print_map(map, lib))
-				// 	return (0);				// va avoir des problems de leaks
 				return (1);
 			}
 			j++;
@@ -148,8 +136,6 @@ int	ft_move_up(char **map, map_struct *lib)
 					map[i - 1][j] = 'P';
 				map[i][j] = '0';
 				ft_printf("%d\n", lib->count++);
-				// if (!ft_print_map(map, lib))
-				// 	return (0);				// va avoir des problems de leaks
 				return (1);
 			}
 			if (map[i][j] == 'L' && map[i - 1][j] != '1')
@@ -157,8 +143,6 @@ int	ft_move_up(char **map, map_struct *lib)
 				map[i][j] = 'E';
 				map[i - 1][j] = 'P';
 				ft_printf("%d\n", lib->count++);
-				// if (!ft_print_map(map, lib))
-				// 	return (0);				// va avoir des problems de leaks
 				return (1);
 			}
 			j++;
