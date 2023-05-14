@@ -6,16 +6,16 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:56:42 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/12 17:19:26 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 21:11:41 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	map_struct lib;
-	char **map;
+	map_struct	lib;
+	char		**map;
 
 	if (ac < 2)
 		return (1);

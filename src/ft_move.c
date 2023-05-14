@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:42:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/12 18:11:07 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 20:51:48 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,8 @@ int	ft_move_right(char **map, map_struct *lib)
 		j = 0;
 		while (map[i][j])
 		{
-			if (map[i][j] == 'P' && map[i][j + 1] != '1')
-			{
-				if (map[i][j + 1] == 'E')
-					map[i][j + 1] = 'L';
-				else
-					map[i][j + 1] = 'P';
-				map[i][j] = '0';
-				ft_printf("%d\n", lib->count++);
+			if (if_right(lib, map, i, j))
 				return (1);
-			}
-			if (map[i][j] == 'L' && map[i][j + 1] != '1')
-			{
-				map[i][j] = 'E';
-				map[i][j + 1] = 'P';
-				ft_printf("%d\n", lib->count++);
-				return (1);
-			}
 			j++;
 		}
 		i++;
@@ -58,23 +43,8 @@ int	ft_move_left(char **map, map_struct *lib)
 		j = 0;
 		while (map[i][j])
 		{
-			if (map[i][j] == 'P' && map[i][j - 1] != '1')
-			{
-				if (map[i][j - 1] == 'E')
-					map[i][j - 1] = 'L';
-				else
-					map[i][j - 1] = 'P';
-				map[i][j] = '0';
-				ft_printf("%d\n", lib->count++);
+			if (if_left(lib, map, i, j))
 				return (1);
-			}
-			if (map[i][j] == 'L' && map[i][j - 1] != '1')
-			{
-				map[i][j] = 'E';
-				map[i][j - 1] = 'P';
-				ft_printf("%d\n", lib->count++);
-				return (1);
-			}
 			j++;
 		}
 		i++;
@@ -93,23 +63,8 @@ int	ft_move_down(char **map, map_struct *lib)
 		j = 0;
 		while (map[i][j])
 		{
-			if (map[i][j] == 'P' && map[i + 1][j] != '1')
-			{
-				if (map[i + 1][j] == 'E')
-					map[i + 1][j] = 'L';
-				else
-					map[i + 1][j] = 'P';
-				map[i][j] = '0';
-				ft_printf("%d\n", lib->count++);
+			if (if_down(lib, map, i, j))
 				return (1);
-			}
-			if (map[i][j] == 'L' && map[i + 1][j] != '1')
-			{
-				map[i][j] = 'E';
-				map[i + 1][j] = 'P';
-				ft_printf("%d\n", lib->count++);
-				return (1);
-			}
 			j++;
 		}
 		i++;
@@ -128,23 +83,8 @@ int	ft_move_up(char **map, map_struct *lib)
 		j = 0;
 		while (map[i][j])
 		{
-			if (map[i][j] == 'P' && map[i - 1][j] != '1')
-			{
-				if (map[i - 1][j] == 'E')
-					map[i - 1][j] = 'L';
-				else
-					map[i - 1][j] = 'P';
-				map[i][j] = '0';
-				ft_printf("%d\n", lib->count++);
+			if (if_up(lib, map, i, j))
 				return (1);
-			}
-			if (map[i][j] == 'L' && map[i - 1][j] != '1')
-			{
-				map[i][j] = 'E';
-				map[i - 1][j] = 'P';
-				ft_printf("%d\n", lib->count++);
-				return (1);
-			}
 			j++;
 		}
 		i++;

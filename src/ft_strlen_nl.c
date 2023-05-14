@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 16:16:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/03 16:37:43 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 20:52:39 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int	ft_strlen_nl(char *str)
 	return (i);
 }
 
-int ft_strlen_tab(char **str)
+int	ft_strlen_tab(char **str)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (str[i])
 		i++;
