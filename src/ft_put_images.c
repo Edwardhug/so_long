@@ -6,13 +6,13 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:36:37 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/12 17:22:13 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 21:22:33 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-int	ft_fill_sea(char **map, map_struct *lib)
+int	ft_fill_sea(char **map, t_map_struct *lib)
 {
 	int	i;
 	int	j;
@@ -37,7 +37,7 @@ int	ft_fill_sea(char **map, map_struct *lib)
 	return (1);
 }
 
-int	ft_put_shore(char **map, map_struct *lib)
+int	ft_put_shore(char **map, t_map_struct *lib)
 {
 	int	i;
 	int	j;
@@ -62,7 +62,7 @@ int	ft_put_shore(char **map, map_struct *lib)
 	return (1);
 }
 
-int	ft_put_turtle(char **map, map_struct *lib)
+int	ft_put_turtle(char **map, t_map_struct *lib)
 {
 	int	i;
 	int	j;

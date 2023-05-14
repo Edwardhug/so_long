@@ -6,13 +6,13 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 20:37:03 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/14 20:53:38 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 21:21:36 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-int	if_right(map_struct *lib, char **map, int i, int j)
+int	if_right(t_map_struct *lib, char **map, int i, int j)
 {
 	if (map[i][j] == 'P' && map[i][j + 1] != '1')
 	{
@@ -34,7 +34,7 @@ int	if_right(map_struct *lib, char **map, int i, int j)
 	return (0);
 }
 
-int	if_left(map_struct *lib, char **map, int i, int j)
+int	if_left(t_map_struct *lib, char **map, int i, int j)
 {
 	if (map[i][j] == 'P' && map[i][j - 1] != '1')
 	{
@@ -56,7 +56,7 @@ int	if_left(map_struct *lib, char **map, int i, int j)
 	return (0);
 }
 
-int	if_down(map_struct *lib, char **map, int i, int j)
+int	if_down(t_map_struct *lib, char **map, int i, int j)
 {
 	if (map[i][j] == 'P' && map[i + 1][j] != '1')
 	{
@@ -78,7 +78,7 @@ int	if_down(map_struct *lib, char **map, int i, int j)
 	return (0);
 }
 
-int	if_up(map_struct *lib, char **map, int i, int j)
+int	if_up(t_map_struct *lib, char **map, int i, int j)
 {
 	if (map[i][j] == 'P' && map[i - 1][j] != '1')
 	{

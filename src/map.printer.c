@@ -6,13 +6,13 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:45:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/14 21:10:16 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 21:22:48 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-int	ft_have_input(int keysym, map_struct *lib)
+int	ft_have_input(int keysym, t_map_struct *lib)
 {
 	if (keysym == 65307)
 		ft_free_all(lib);
@@ -37,7 +37,7 @@ int	handle_no_event(int nothing)
 	return (nothing);
 }
 
-int	ft_map_creator(char **map, map_struct lib)
+int	ft_map_creator(char **map, t_map_struct lib)
 {
 	size_t	x;
 	size_t	y;
@@ -61,7 +61,7 @@ int	ft_map_creator(char **map, map_struct lib)
 	return (1);
 }
 
-int	ft_print_map(char **map, map_struct lib)
+int	ft_print_map(char **map, t_map_struct lib)
 {
 	if (!ft_fill_sea(map, &lib))
 		return (0);

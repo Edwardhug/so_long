@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 15:34:43 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/12 17:45:42 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 21:28:55 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	**ft_parsing(int ac, char **av)
 
 	if (ft_have_error_with_param(ac, av) == 1)
 	{
-		ft_printf("Error\nBad number of parameters\n");
+		ft_printf("Error\nProblem with the parameters\n");
 		return (NULL);
 	}
 	number_of_line = ft_count_line(av);

@@ -6,18 +6,18 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:53:05 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/12 17:21:47 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 21:22:20 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-void	short_image_window(map_struct *lib, int i, int j, void *img)
+void	short_image_window(t_map_struct *lib, int i, int j, void *img)
 {
 	mlx_put_image_to_window(lib->mlx, lib->win, img, j * 89, i * 89);
 }
 
-int	ft_put_coin(char **map, map_struct *lib)
+int	ft_put_coin(char **map, t_map_struct *lib)
 {
 	int	i;
 	int	j;
@@ -42,7 +42,7 @@ int	ft_put_coin(char **map, map_struct *lib)
 	return (1);
 }
 
-int	ft_put_door(char **map, map_struct *lib)
+int	ft_put_door(char **map, t_map_struct *lib)
 {
 	int	i;
 	int	j;
@@ -67,7 +67,7 @@ int	ft_put_door(char **map, map_struct *lib)
 	return (1);
 }
 
-int	ft_put_lock(char **map, map_struct *lib)
+int	ft_put_lock(char **map, t_map_struct *lib)
 {
 	int	i;
 	int	j;

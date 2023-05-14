@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:35:28 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/14 20:54:06 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 21:21:17 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_free_tab_char(char **str)
 	free(str);
 }
 
-void	free_images(map_struct *lib)
+void	free_images(t_map_struct *lib)
 {
 	if (lib->turtle)
 		mlx_destroy_image(lib->mlx, lib->turtle);
@@ -42,7 +42,7 @@ void	free_images(map_struct *lib)
 	mlx_destroy_image(lib->mlx, lib->image);
 }
 
-int	ft_free_all(map_struct *lib)
+int	ft_free_all(t_map_struct *lib)
 {
 	free_images(lib);
 	mlx_destroy_window(lib->mlx, lib->win);

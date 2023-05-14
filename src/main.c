@@ -6,7 +6,7 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:56:42 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/14 21:11:41 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 21:27:30 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 int	main(int ac, char **av)
 {
-	map_struct	lib;
-	char		**map;
+	t_map_struct	lib;
+	char			**map;
 
-	if (ac < 2)
+	if (ac != 2)
+	{
+		ft_printf("Error\nInvalid number of argument\n");
 		return (1);
+	}
 	map = ft_parsing(ac, av);
 	if (!map)
 		return (0);

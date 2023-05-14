@@ -6,13 +6,13 @@
 /*   By: lgabet <lgabet@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:42:32 by lgabet            #+#    #+#             */
-/*   Updated: 2023/05/14 20:51:48 by lgabet           ###   ########.fr       */
+/*   Updated: 2023/05/14 21:21:55 by lgabet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
 
-int	ft_move_right(char **map, map_struct *lib)
+int	ft_move_right(char **map, t_map_struct *lib)
 {
 	size_t	i;
 	size_t	j;
@@ -32,7 +32,7 @@ int	ft_move_right(char **map, map_struct *lib)
 	return (1);
 }
 
-int	ft_move_left(char **map, map_struct *lib)
+int	ft_move_left(char **map, t_map_struct *lib)
 {
 	size_t	i;
 	size_t	j;
@@ -52,7 +52,7 @@ int	ft_move_left(char **map, map_struct *lib)
 	return (1);
 }
 
-int	ft_move_down(char **map, map_struct *lib)
+int	ft_move_down(char **map, t_map_struct *lib)
 {
 	size_t	i;
 	size_t	j;
@@ -72,7 +72,7 @@ int	ft_move_down(char **map, map_struct *lib)
 	return (1);
 }
 
-int	ft_move_up(char **map, map_struct *lib)
+int	ft_move_up(char **map, t_map_struct *lib)
 {
 	size_t	i;
 	size_t	j;

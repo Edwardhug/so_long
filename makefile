@@ -10,6 +10,7 @@ SRCS	= 	ft_free.c\
 			ft_put_images.c\
 			ft_move.c\
 			ft_init_images.c\
+			ft_move_if.c\
 			main.c
 
 SRCS_D			=	src/
@@ -45,7 +46,7 @@ CC				=	cc
 
 GCC				=	gcc
 
-CCFLAG			=	# -Wall -Werror -Wextra
+CCFLAG			=	-Wall -Werror -Wextra
 
 FSA				=	-g3
 
